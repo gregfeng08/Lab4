@@ -14,12 +14,9 @@ public class Lab4 {
 		int consoleInput=0;
 		int num;
 		boolean running=true;
-		while(running) {
-			System.out.println("Please choose one option from the following menu:");
-			System.out.println("1) Calculate the sum of the integers from 1 to m");
-			System.out.println("2) Calculate the factorial of the given number");
-			System.out.println("3) Display the leftmost digit of the given number");
-			System.out.println("4) Quit");
+		do {
+			//Displays menu and takes the user's input
+			displayMenu();
 			consoleInput=scanner.nextInt();
 			switch(consoleInput) {
 			//Sum of ints 1-m
@@ -56,6 +53,16 @@ public class Lab4 {
 				System.out.println("Bye!");
 				break;
 			}
-		}
+		} while (running);
+	}
+	/*
+	 * Displays the menu
+	 */
+	private static void displayMenu() {
+		System.out.println("Please choose one option from the following menu:");
+		System.out.println("1) Calculate the sum of the integers from 1 to m");
+		System.out.println("2) Calculate the factorial of the given number");
+		System.out.println("3) Display the leftmost digit of the given number");
+		System.out.println("4) Quit");
 	}
 }
